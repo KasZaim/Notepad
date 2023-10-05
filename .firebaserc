@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "notepad-9a02f": {
+      "hosting": {
+        "DAKeep": [
+          "notepad-9a02f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "notepad-9a02f"
+  }
+}
