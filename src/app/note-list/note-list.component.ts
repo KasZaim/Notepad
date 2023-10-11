@@ -18,7 +18,11 @@ export class NoteListComponent {
   }
 
   getList(): Note[]{
-    return this.noteService.normalNotes;
+    if (this.status == "notes"){
+        return this.noteService.normalNotes;
+     } else {
+      return this.noteService.trashNotes;
+    } 
   }
 
   changeFavFilter(filter:"all" | "fav"){

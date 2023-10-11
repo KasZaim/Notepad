@@ -54,13 +54,19 @@ export class NoteListService {
       }
     }
 
-  async addNote(item: Note, colId: "notes" | "trash"){
-     await addDoc(this.getNotesRef(), item).catch(
-      (err) => {console.error(err)}
-    ).then(
-      (docRef) => {console.log("Document written with ID: ", docRef?.id);}
-    )
-  }
+    async addNote(item: Note, colId: "notes" | "trash") {
+      if (colId == "notes"){
+      await addDoc(this.getNotesRef(), item)
+        .catch((err) => {
+          console.error(err);
+        }) 
+      } else {
+        await addDoc(this.getTrashRef(), item)
+        .catch((err) => {
+          console.error(err);
+        }) 
+      }
+    }
 
   setNoteObject(obj: any, id: string): Note {
     return {
