@@ -13,7 +13,7 @@ export class NoteListComponent {
   status: "notes" | "trash" = "notes";
   
   
-  constructor(public noteService: NoteListService) {
+  constructor(private noteService: NoteListService) {
     
   }
 
