@@ -19,7 +19,12 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+       
+        ::first-letter{
+            text-transform: capitalize;
+        }
     }
+
 
     >p {
         width: 100%;
